@@ -1,6 +1,5 @@
 require('dotenv').config()
 
-import Shopify, { ApiVersion as Version, AuthQuery, DataType } from '@shopify/shopify-api';
 var express = require('express');
 var app = express();
 const bodyParser = require("body-parser");
@@ -62,11 +61,6 @@ axios.get(APIUrl)
 app.get("/", async (req, res) => {
   res.json(productList)
 });
-
-
-
-// console.log(API_KEY)
-// console.log(API_SECRET_KEY)
 
 const listener = app.listen(process.env.PORT || 3000, function () {
   console.log("Your app is listening on port " + listener.address().port);
