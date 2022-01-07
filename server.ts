@@ -15,6 +15,20 @@ app.use(bodyParser.json());
 
 let productList = []
 
+function formatDate(date) {
+  var d = new Date(date),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear();
+
+  if (month.length < 2) 
+      month = '0' + month;
+  if (day.length < 2) 
+      day = '0' + day;
+
+  return [year, month, day].join('-');
+}
+
 axios.get(APIUrl)
   .then(function (response) {
     // handle success
@@ -27,7 +41,7 @@ axios.get(APIUrl)
           data: {
             price: item.variants[0].price,
             status: item.status,
-            created_at: item.created_at,
+            created_at: formatDate(item.created_at),
           }
         }
       )
