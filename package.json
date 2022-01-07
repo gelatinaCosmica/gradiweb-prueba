@@ -8,7 +8,7 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "nodemon": "nodemon server.ts",
+    "nodemon": "nodemon ts-node ./server.ts",
     "start": "ts-node ./server.ts"
   },
   "name": "gradiweb-prueba",
