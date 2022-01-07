@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@shopify/shopify-api": "^2.0.0",
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "nodemon": "nodemon server.ts",
+    "start": "ts-node ./server.ts"
+  },
+  "name": "gradiweb-prueba",
+  "version": "1.0.0",
+  "description": "prueba gradiweb",
+  "main": "server.js",
+  "author": "gelatina",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
