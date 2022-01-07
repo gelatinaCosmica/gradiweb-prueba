@@ -30,7 +30,6 @@ function formatDate(date) {
 
 axios.get(APIUrl)
   .then(function (response) {
-    // handle success
     const products = response.data.products
 
     products.map((item) => {
@@ -45,17 +44,11 @@ axios.get(APIUrl)
         }
       )
     })
-
-    // console.log(products);
     console.log(productList);
   })
   .catch(function (error) {
-    // handle error
     console.log(error);
   })
-  .then(function () {
-    // always executed
-  });
 
 
 app.get("/", async (req, res) => {
